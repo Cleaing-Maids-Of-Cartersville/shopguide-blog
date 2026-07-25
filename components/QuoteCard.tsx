@@ -13,27 +13,33 @@ import { SHOPIFY_BAG_MARK_PATH } from '@/lib/shopify-brand'
 const KNOWN_ATTRIBUTION_IMAGES: Array<{ match: string; image: string }> = [
   {
     match: 'harley finkelstein',
-    image: 'https://assets.cdn.filesafe.space/YwFixzedrximlLRmcQo3/media/69c202083e56b97ca6a4c866.jpg',
+    image:
+      'https://assets.cdn.filesafe.space/YwFixzedrximlLRmcQo3/media/69c202083e56b97ca6a4c866.jpg',
   },
   {
     match: 'lütke',
-    image: 'https://assets.cdn.filesafe.space/YwFixzedrximlLRmcQo3/media/69c93875e5ae5af48d3c8197.jpg',
+    image:
+      'https://assets.cdn.filesafe.space/YwFixzedrximlLRmcQo3/media/69c93875e5ae5af48d3c8197.jpg',
   },
   {
     match: 'lutke',
-    image: 'https://assets.cdn.filesafe.space/YwFixzedrximlLRmcQo3/media/69c93875e5ae5af48d3c8197.jpg',
+    image:
+      'https://assets.cdn.filesafe.space/YwFixzedrximlLRmcQo3/media/69c93875e5ae5af48d3c8197.jpg',
   },
   {
     match: 'john collison',
-    image: 'https://assets.cdn.filesafe.space/YwFixzedrximlLRmcQo3/media/69d171daa7dcb4cff08f69db.jpeg',
+    image:
+      'https://assets.cdn.filesafe.space/YwFixzedrximlLRmcQo3/media/69d171daa7dcb4cff08f69db.jpeg',
   },
   {
     match: 'emily glassberg sands',
-    image: 'https://assets.cdn.filesafe.space/YwFixzedrximlLRmcQo3/media/69e052d0db7c222f717d6aff.jpg',
+    image:
+      'https://assets.cdn.filesafe.space/YwFixzedrximlLRmcQo3/media/69e052d0db7c222f717d6aff.jpg',
   },
   {
     match: 'nora zukauskaite',
-    image: 'https://assets.cdn.filesafe.space/YwFixzedrximlLRmcQo3/media/69ca66f65216dffd6ea12490.jpg',
+    image:
+      'https://assets.cdn.filesafe.space/YwFixzedrximlLRmcQo3/media/69ca66f65216dffd6ea12490.jpg',
   },
 ]
 
