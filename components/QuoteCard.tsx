@@ -5,12 +5,41 @@ import Image from 'next/image'
 import Link from '@/components/Link'
 import { SHOPIFY_BAG_MARK_PATH } from '@/lib/shopify-brand'
 
-/** Stylized quote graphic for John Collison (agentic commerce); used when attribution names him. */
-const JOHN_COLLISON_QUOTE_IMAGE =
-  'https://assets.cdn.filesafe.space/YwFixzedrximlLRmcQo3/media/69d171daa7dcb4cff08f69db.jpeg'
+/**
+ * Known-person fallback photos, keyed by a lowercase substring matched against the
+ * attribution string. Lets any <QuoteCard> for a recurring speaker show their photo
+ * without every post having to repeat the `image` prop.
+ */
+const KNOWN_ATTRIBUTION_IMAGES: Array<{ match: string; image: string }> = [
+  {
+    match: 'harley finkelstein',
+    image: 'https://assets.cdn.filesafe.space/YwFixzedrximlLRmcQo3/media/69c202083e56b97ca6a4c866.jpg',
+  },
+  {
+    match: 'lütke',
+    image: 'https://assets.cdn.filesafe.space/YwFixzedrximlLRmcQo3/media/69c93875e5ae5af48d3c8197.jpg',
+  },
+  {
+    match: 'lutke',
+    image: 'https://assets.cdn.filesafe.space/YwFixzedrximlLRmcQo3/media/69c93875e5ae5af48d3c8197.jpg',
+  },
+  {
+    match: 'john collison',
+    image: 'https://assets.cdn.filesafe.space/YwFixzedrximlLRmcQo3/media/69d171daa7dcb4cff08f69db.jpeg',
+  },
+  {
+    match: 'emily glassberg sands',
+    image: 'https://assets.cdn.filesafe.space/YwFixzedrximlLRmcQo3/media/69e052d0db7c222f717d6aff.jpg',
+  },
+  {
+    match: 'nora zukauskaite',
+    image: 'https://assets.cdn.filesafe.space/YwFixzedrximlLRmcQo3/media/69ca66f65216dffd6ea12490.jpg',
+  },
+]
 
-function isJohnCollisonAttribution(attribution: string): boolean {
-  return attribution.toLowerCase().includes('john collison')
+function knownAttributionImage(attribution: string): string | undefined {
+  const lower = attribution.toLowerCase()
+  return KNOWN_ATTRIBUTION_IMAGES.find(({ match }) => lower.includes(match))?.image
 }
 
 function isShopifyOfficialAttribution(attribution: string): boolean {
@@ -48,11 +77,9 @@ export default function QuoteCard({
 }: QuoteCardProps) {
   const resolvedImage =
     image ??
-    (isJohnCollisonAttribution(attribution)
-      ? JOHN_COLLISON_QUOTE_IMAGE
-      : isShopifyOfficialAttribution(attribution)
-        ? SHOPIFY_BAG_MARK_PATH
-        : undefined)
+    (isShopifyOfficialAttribution(attribution)
+      ? SHOPIFY_BAG_MARK_PATH
+      : knownAttributionImage(attribution))
   const resolvedImageUrl = resolvedImage ? publicAssetUrl(resolvedImage) : undefined
   const attributionEl: ReactNode = source ? (
     <Link
