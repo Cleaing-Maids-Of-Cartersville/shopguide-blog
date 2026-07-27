@@ -9,6 +9,8 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
+        // RSS/Atom feeds are not useful search landing pages; keep HTML pages indexable.
+        disallow: ['/*/feed.xml', '/feed.xml', '/admin', '/api'],
       },
     ],
     sitemap: `${siteMetadata.siteUrl}/sitemap.xml`,

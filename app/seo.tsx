@@ -13,6 +13,17 @@ export function genPageMetadata({ title, description, image, ...rest }: PageSEOP
   return {
     title,
     description: description || siteMetadata.description,
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
     openGraph: {
       title: `${title} | ${siteMetadata.title}`,
       description: description || siteMetadata.description,
