@@ -64,5 +64,5 @@ export const footerPolicies: { label: string; href: string }[] = [
   { label: 'Legal notice', href: `${shopStoreUrl}/policies/legal-notice` },
   { label: 'Refund policy', href: `${shopStoreUrl}/policies/refund-policy` },
   { label: 'Terms of service', href: `${shopStoreUrl}/policies/terms-of-service` },
-  { label: 'Documentation', href: 'https://www.docs.yourshopguide.com/' },
+  { label: 'Documentation', href: 'https://docs.yourshopguide.com/' },
 ]
