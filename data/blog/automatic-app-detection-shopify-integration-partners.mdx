@@ -1,7 +1,7 @@
 ---
 title: 'Automatic App Detection: How ShopGuide Finds the Shopify Apps You Already Run'
 date: '2026-09-17'
-lastmod: '2026-09-17'
+lastmod: '2026-09-22'
 tags:
   - 'automatic-app-detection'
   - 'integration-partners'
@@ -33,11 +33,11 @@ Automatic app detection is ShopGuide's answer to that complaint. One feature. No
 
 Open **ShopGuide → Settings → Integrations**.
 
-ShopGuide scans the published theme and storefront assets. It looks for active theme embeds. Klaviyo onsite scripts. Judge.me review widgets. Smile.io loyalty launchers. The apps it recognizes land at the top under "Looks like you use these," with an **On your store** badge.
+ShopGuide checks the published theme for app embeds it recognizes. Klaviyo onsite. Judge.me review widgets. Smile.io loyalty launchers. The apps it finds land at the top under "Looks like you use these," with an **On your store** badge.
 
 That badge is the product.
 
-You still paste a token for Smile.io, Judge.me, or Rivyo. Slack still wants an incoming webhook. Detection does not invent credentials. It stops you from hunting through a wall of logos for tools you already installed.
+You still paste a key or token for Klaviyo, Smile.io, Judge.me, or Rivyo. Slack still wants an incoming webhook. Alia is on by default. Detection does not invent credentials. It stops you from hunting through a wall of logos for tools you already installed.
 
 The public list lives on the [integrations page](https://blog.yourshopguide.com/integrations). Six partners: Rivyo, Judge.me, Klaviyo, Smile.io, Alia, Slack. Each card leads with what the pairing does for the merchant. The how-to sits on the partner page behind "Learn more."
 
@@ -60,7 +60,7 @@ That wiring is why automatic app detection matters. The scan finds what is alrea
 
 ## What each partner actually does
 
-Keep the ones you run. Leave the rest alone.
+Keep the ones you run. Leave the rest alone. The full partner-by-partner guide, with a setup table, is [Shopify integration partners](/blog/shopify-integration-partners-existing-stack). The short version:
 
 **Judge.me and Rivyo.**
 Verified reviews and photo proof inside the answer. A shopper asks which moisturizer works for sensitive skin. The agent can quote a real review instead of inventing confidence. You paste a public API token. No token, no review text.
@@ -95,11 +95,11 @@ Automatic app detection is built for that sentence. It does not uninstall your s
 
 Limits, said plainly.
 
-Detection only sees what is in the published theme and storefront assets. An app sitting installed but unpublished will not badge itself.
+Detection is a heuristic. It only sees app embeds on the published theme. An app installed but not on the theme will not badge itself. Connect it by hand.
 
 Dirty product data still produces thin answers. The Catalog API keeps stock honest. It does not write your descriptions.
 
-Slack is one-way. Smile.io and review apps need tokens. A partial stack still works. You do not need every logo.
+Slack is one-way. Klaviyo, Smile.io, and the review apps need a key or token. A partial stack still works. You do not need every logo.
 
 That is the deal. Native wiring. Partner context when it exists. Not a new operating system.
 
@@ -124,7 +124,7 @@ Connect the ones you run. Leave the rest alone.
 ## Frequently Asked Questions
 
 **What is automatic app detection?**
-A scan inside ShopGuide → Settings → Integrations. It reads the published theme and storefront assets, then badges partners it recognizes under "Looks like you use these."
+A scan inside ShopGuide → Settings → Integrations. It checks the published theme for app embeds, then badges partners it recognizes under "Looks like you use these."
 
 **What Shopify app integrations does ShopGuide support?**
 Klaviyo, Judge.me, Rivyo, Smile.io, Alia, and Slack, plus the native Catalog API. The public list is on the [integrations page](https://blog.yourshopguide.com/integrations).
@@ -139,7 +139,7 @@ No. Keep the apps that already work. ShopGuide reads them. It does not ask you t
 ShopGuide is one theme block. Partners are not copied onto the page as extra pixels. The agent reads those systems during the conversation.
 
 **How do I turn a partner on?**
-Install both apps. Detection badges what it finds. Smile.io, Judge.me, and Rivyo still need an API token. Slack needs an incoming webhook URL pasted into ShopGuide settings.
+Detection badges what it finds. Klaviyo, Smile.io, Judge.me, and Rivyo still need an API key or token pasted on their card. Slack needs an incoming webhook URL. Alia is on by default.
 
 **What if I only use some of the partners?**
 Use the ones you run. A partial stack still works. You do not need every logo on the page.
