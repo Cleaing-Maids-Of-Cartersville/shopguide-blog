@@ -119,6 +119,82 @@ module.exports = () => {
     },
     async redirects() {
       return [
+        // Consolidated duplicate integration-partner posts (2026-09-22) into one guide + the app-detection post
+        {
+          source: '/blog/integration-partners-connect-existing-shopify-stack',
+          destination: '/blog/shopify-integration-partners-existing-stack',
+          permanent: true,
+        },
+        {
+          source: '/blog/how-shopguide-is-wired-into-shopify-app-integrations',
+          destination: '/blog/shopify-integration-partners-existing-stack',
+          permanent: true,
+        },
+        {
+          source: '/blog/shopify-apps-that-work-together-integration-partners',
+          destination: '/blog/shopify-integration-partners-existing-stack',
+          permanent: true,
+        },
+        {
+          source: '/blog/shopify-app-integrations-partner-context',
+          destination: '/blog/shopify-integration-partners-existing-stack',
+          permanent: true,
+        },
+        {
+          source: '/blog/shopguide-integrations-partner-page',
+          destination: '/blog/shopify-integration-partners-existing-stack',
+          permanent: true,
+        },
+        {
+          source: '/blog/shopify-app-integrations-decision-path',
+          destination: '/blog/shopify-integration-partners-existing-stack',
+          permanent: true,
+        },
+        {
+          source: '/blog/integration-partners-shopguide-partner-page',
+          destination: '/blog/shopify-integration-partners-existing-stack',
+          permanent: true,
+        },
+        {
+          source: '/blog/shopify-integration-partners-put-stack-in-conversation',
+          destination: '/blog/shopify-integration-partners-existing-stack',
+          permanent: true,
+        },
+        {
+          source: '/blog/integration-partners-connect-what-you-already-run',
+          destination: '/blog/shopify-integration-partners-existing-stack',
+          permanent: true,
+        },
+        {
+          source: '/blog/shopify-partner-stack-one-conversation',
+          destination: '/blog/shopify-integration-partners-existing-stack',
+          permanent: true,
+        },
+        {
+          source: '/blog/shopify-app-integrations-show-up-in-the-conversation',
+          destination: '/blog/shopify-integration-partners-existing-stack',
+          permanent: true,
+        },
+        {
+          source: '/blog/shopify-integration-partners-page-what-each-card-buys',
+          destination: '/blog/shopify-integration-partners-existing-stack',
+          permanent: true,
+        },
+        {
+          source: '/blog/shopify-integration-partners-give-the-stack-a-seat',
+          destination: '/blog/shopify-integration-partners-existing-stack',
+          permanent: true,
+        },
+        {
+          source: '/blog/shopify-integration-partners-shopper-gets-the-stack',
+          destination: '/blog/shopify-integration-partners-existing-stack',
+          permanent: true,
+        },
+        {
+          source: '/blog/shopify-integration-partners-automatic-app-detection',
+          destination: '/blog/automatic-app-detection-shopify-integration-partners',
+          permanent: true,
+        },
         {
           source: '/blogs',
           destination: '/blog',
