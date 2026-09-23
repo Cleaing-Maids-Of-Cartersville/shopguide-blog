@@ -1,9 +1,3 @@
-## 2024-05-18 - Mobile Nav Focus State & ARIA
-
-**Learning:** Dialog/modal interactive elements (like the close button) often lose their context for screen reader users if labelled identically to their triggers (e.g. "Toggle Menu" on both open and close buttons).
-**Action:** Always ensure that interior modal close buttons explicitly state "Close" or similar instead of reusing the trigger's generic label. Verify keyboard `focus-visible` states are present on custom buttons.
-
-## 2024-05-18 - Audio Player Button Focus States
-
-**Learning:** Custom interactive elements within media players (like Play, Pause, Rewind buttons in `<AudioPlayer>`) often lack default visual focus states since they use generic `button` wrappers with Tailwind padding/background classes.
-**Action:** Consistently apply `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500` to all icon-only or custom interactive buttons in media components to ensure keyboard navigation remains accessible.
+## 2024-10-24 - Screen Reader Only Labels on Newsletter Forms
+**Learning:** Adding `id` to an input element and linking it to a `sr-only` class `<label>` via `htmlFor` is an effective pattern to provide accessibility to visually-hidden or placeholder-reliant forms without compromising on clean, minimalist design typical of modern interfaces.
+**Action:** Consistently use the `sr-only` class combined with `id` and `htmlFor` to add descriptive, screen-reader accessible labels to minimalist inputs that visually rely on placeholders.

@@ -113,6 +113,9 @@ export default function NewsletterFormWithLogging({
         </p>
 
         <form onSubmit={handleSubmit} className="relative">
+          <label htmlFor="newsletter-email" className="sr-only">
+            Email Address
+          </label>
           <div
             className={
               narrow
@@ -121,6 +124,7 @@ export default function NewsletterFormWithLogging({
             }
           >
             <input
+              id="newsletter-email"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
